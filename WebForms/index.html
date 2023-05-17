@@ -14,78 +14,134 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form action="/" method="GET">
-      <label for="username">Your name</label>
-      <input type="text" name="user-name" id="username" />
-      <label for="useremail">Your Email</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="textarea">Your Message</label>
-      <textarea name="user-message" id="textarea"></textarea>
-      <label for="fav-color">Your Favourite Color</label>
-      <select name="user-color" id="fav-color">
-        <option value="Yellow">Yellow</option>
-        <option value="Black">Black</option>
-        <option value="Green">Green</option>
-      </select>
-      <label for="userage">Your Age</label>
-      <input type="number" name="user-age" id="userage" />
-      <label for="userbirthdate">Choose Your Birth Date</label>
-      <input type="date" name="user-birthdate" id="userbirthdate" />
-      <label for="userpassword">Enter Your Password</label>
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="userpassword2">Confirm Password</label>
-      <input type="password" name="user-password2" id="userpassword2" />
-      <hr />
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET">
+        <section>
+          <h3>Your Personal Details</h3>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input type="text" name="user-name" id="username" required/>
+            </li>
+            <li>
+              <label for="useremail">Your Email</label>
+              <input type="email" name="user-email" id="useremail" required/>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>More Information</h3>
+          <ul>
+            <li>
+              <label for="fav-color">Your Favourite Color</label>
+              <select name="user-color" id="fav-color">
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+                <option value="Green">Green</option>
+              </select>
+            </li>
+            <li>
+              <label for="userage">Your Age</label>
+              <input type="number" name="user-age" id="userage" min="18" max="65"/>
+            </li>
+            <li>
+              <label for="userbirthdate">Choose Your Birth Date</label>
+              <input type="date" name="user-birthdate" id="userbirthdate" required min="1920-01-01" max="2005-01-01"/>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Create Password</h3>
+          <ul>
+            <li>
+              <label for="userpassword">Enter Your Password</label>
+              <input type="password" name="user-password" id="userpassword" minlength="7" required max="65"/>
+            </li>
+            <li>
+              <label for="userpassword2">Confirm Password</label>
+              <input type="password" name="user-password2" id="userpassword2" />
+            </li>
+          </ul>
+        </section>
 
-      <div>
-        <h2>How may we verify your account?</h2>
-        <div class="choices">
-          <input type="radio" name="verify" id="verify-sms" value="sms" />
-          <label for="verify-sms">Via Text Message (SMS)</label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="verify" id="verify-call" value="phone" />
-          <label for="verify-call">Via Voice Call</label>
-        </div>
-        <div class="choices">
-          <input type="radio" name="verify" id="verify-email" value="email" />
-          <label for="verify-email">Via Email</label>
-        </div>
+        <section>
+          <h3>How may we verify your account?</h3>
+          <ul>
+            <li class="choices">
+              <input type="radio" name="verify" id="verify-sms" value="sms" />
+              <label for="verify-sms">Via Text Message (SMS)</label>
+            </li>
+            <li class="choices">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-call"
+                value="phone"
+              />
+              <label for="verify-call">Via Voice Call</label>
+            </li>
+            <li class="choices">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+              />
+              <label for="verify-email">Via Email</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Have something to say?</h3>
+          <label for="textarea">Your Message</label>
+          <textarea name="user-message" id="textarea" rows="8"></textarea>
+        </section>
+        <section>
+          <h3>How would you like to be contacted?</h3>
+          <ul>
+            <li class="choices">
+              <input
+                type="checkbox"
+                name="groupSelection"
+                id="optionEmail"
+                value="Email"
+              />
+              <label for="optionEmail">Email</label>
+            </li>
+            <li class="choices">
+              <input
+                type="checkbox"
+                name="groupSelection"
+                id="optionPhone"
+                value="Phone"
+              />
+              <label for="optionPhone">Phone</label>
+            </li>
+            <li class="choices">
+              <input
+                type="checkbox"
+                name="groupSelection"
+                id="optionSMS"
+                value="SMS"
+              />
+              <label for="optionSMS">SMS</label>
+            </li>
+          </ul>
+        </section>
+
         <hr />
         <div class="choices">
           <input type="checkbox" name="user-terms" id="terms" />
           <label for="terms">Do you agree to our terms?</label>
         </div>
-        <hr />
-        <div class="choices">
-          <input
-            type="checkbox"
-            name="groupSelection"
-            id="optionEmail"
-            value="Email"
-          />
-          <label for="optionEmail">Email</label>
-        </div>
-        <div class="choices">
-          <input
-            type="checkbox"
-            name="groupSelection"
-            id="optionPhone"
-            value="Phone"
-          />
-          <label for="optionPhone">Phone</label>
-        </div>
-        <div class="choices">
-          <input
-            type="checkbox"
-            name="groupSelection"
-            id="optionSMS"
-            value="SMS"
-          />
-          <label for="optionSMS">SMS</label>
-        </div>
-      </div>
-      <button>Submit</button>
-    </form>
+
+      
+          <button>Submit</button>
+   
+      </form>
+    </main>
   </body>
 </html>
