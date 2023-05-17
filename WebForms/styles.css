@@ -13,7 +13,9 @@ label {
   margin-bottom: 0.5rem;
   display: block;
 }
-input {
+input,
+textarea,
+select {
   width: 100%;
   display: block;
   margin-bottom: 1rem;
@@ -22,7 +24,8 @@ input {
   padding: 0.25rem;
   color: rgb(49, 49, 49);
 }
-input:focus{
+input:focus,
+textarea:focus {
     background-color: rgb(219, 190, 253);
     color: rgb(32, 5, 63);
     border-color: rgb(32, 5, 63);
@@ -40,4 +43,11 @@ button {
 button:hover {
     background-color: rgb(58, 5, 119);
     border-color: rgb(45, 2, 95);
+}
+.choices {
+    display: flex;
+}
+.choices input{
+    width: auto;
+    margin-right: 0.5rem;
 }

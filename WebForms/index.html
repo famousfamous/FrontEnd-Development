@@ -19,6 +19,14 @@
       <input type="text" name="user-name" id="username" />
       <label for="useremail">Your Email</label>
       <input type="email" name="user-email" id="useremail" />
+      <label for="textarea">Your Message</label>
+      <textarea name="user-message" id="textarea"></textarea>
+      <label for="fav-color">Your Favourite Color</label>
+      <select name="user-color" id="fav-color">
+        <option value="Yellow">Yellow</option>
+        <option value="Black">Black</option>
+        <option value="Green">Green</option>
+      </select>
       <label for="userage">Your Age</label>
       <input type="number" name="user-age" id="userage" />
       <label for="userbirthdate">Choose Your Birth Date</label>
@@ -28,18 +36,54 @@
       <label for="userpassword2">Confirm Password</label>
       <input type="password" name="user-password2" id="userpassword2" />
       <hr />
-      <h2>How may we verify your account?</h2>
+
       <div>
-        <input type="radio" name="verify" id="verify-sms" value="sms" />
-        <label for="verify-sms">Via Text Message (SMS)</label>
-      </div>
-      <div>
-        <input type="radio" name="verify" id="verify-call" value="phone" />
-        <label for="verify-call">Via Voice Call</label>
-      </div>
-      <div>
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">Via Email</label>
+        <h2>How may we verify your account?</h2>
+        <div class="choices">
+          <input type="radio" name="verify" id="verify-sms" value="sms" />
+          <label for="verify-sms">Via Text Message (SMS)</label>
+        </div>
+        <div class="choices">
+          <input type="radio" name="verify" id="verify-call" value="phone" />
+          <label for="verify-call">Via Voice Call</label>
+        </div>
+        <div class="choices">
+          <input type="radio" name="verify" id="verify-email" value="email" />
+          <label for="verify-email">Via Email</label>
+        </div>
+        <hr />
+        <div class="choices">
+          <input type="checkbox" name="user-terms" id="terms" />
+          <label for="terms">Do you agree to our terms?</label>
+        </div>
+        <hr />
+        <div class="choices">
+          <input
+            type="checkbox"
+            name="groupSelection"
+            id="optionEmail"
+            value="Email"
+          />
+          <label for="optionEmail">Email</label>
+        </div>
+        <div class="choices">
+          <input
+            type="checkbox"
+            name="groupSelection"
+            id="optionPhone"
+            value="Phone"
+          />
+          <label for="optionPhone">Phone</label>
+        </div>
+        <div class="choices">
+          <input
+            type="checkbox"
+            name="groupSelection"
+            id="optionSMS"
+            value="SMS"
+          />
+          <label for="optionSMS">SMS</label>
+        </div>
       </div>
       <button>Submit</button>
     </form>
